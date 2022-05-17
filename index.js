@@ -42,12 +42,19 @@ async function run() {
     const database = client.db("doctorPortal");
     const appointmentCollection = database.collection("appointments");
     const userCollection = database.collection("users");
+    const courseCollection = database.collection("courses");
 
-    // app.get("/appointments", async (req, res) => {
-    //     const cursor = appointmentCollection.find({});
-    //     const appointments = await cursor.toArray();
-    //     res.json(appointments);
-    // })
+    app.get("/appointments", async (req, res) => {
+        const cursor = appointmentCollection.find({});
+        const appointments = await cursor.toArray();
+        res.json(appointments);
+    })
+
+    app.get("/course", async (req, res) => {
+      const cursor = courseCollection.find({});
+      const courses = await cursor.toArray();
+      res.json(courses);
+    });
 
     app.get("/appointments", verifyToken, async (req, res) => {
       const email = req.query.email;
