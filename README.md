@@ -12,5 +12,5 @@ npm install
 Step-2:
 
 ```sh
-npm start
+node start
 ```

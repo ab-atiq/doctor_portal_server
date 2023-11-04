@@ -45,10 +45,10 @@ async function run() {
     const courseCollection = database.collection("courses");
 
     app.get("/appointments", async (req, res) => {
-        const cursor = appointmentCollection.find({});
-        const appointments = await cursor.toArray();
-        res.json(appointments);
-    })
+      const cursor = appointmentCollection.find({});
+      const appointments = await cursor.toArray();
+      res.json(appointments);
+    });
 
     app.get("/course", async (req, res) => {
       const cursor = courseCollection.find({});
@@ -137,5 +137,5 @@ app.get("/", (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`);
+  console.log(`Example app listening on port localhost:${port}`);
 });
