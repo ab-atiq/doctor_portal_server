@@ -43,6 +43,7 @@ async function run() {
     const appointmentCollection = database.collection("appointments");
     const userCollection = database.collection("users");
     const courseCollection = database.collection("courses");
+    console.log("Database connected successfully.");
 
     app.get("/appointments", async (req, res) => {
       const cursor = appointmentCollection.find({});

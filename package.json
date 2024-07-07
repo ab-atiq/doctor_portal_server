@@ -19,6 +19,7 @@
     "dotenv": "^16.0.0",
     "express": "^4.17.3",
     "firebase-admin": "^10.0.2",
-    "mongodb": "^4.4.1"
+    "mongodb": "^4.4.1",
+    "nodemon": "^3.1.4"
   }
 }
